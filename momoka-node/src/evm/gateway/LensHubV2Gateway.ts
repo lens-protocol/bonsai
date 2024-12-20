@@ -94,10 +94,10 @@ export class LensHubV2Gateway {
     // we go a bespoke way so we can use our own http library and not ethers
     // to be in full control
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore - use internal methods from mutlicall
+    // @ts-ignore - use internal methods from multicall
     const calls = multicall.mapCallContextToMatchContractFormat(
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore - use internal methods from mutlicall
+      // @ts-ignore - use internal methods from multicall
       multicall.buildAggregateCallContext([contractCallContext])
     );
     const encodedData = contractInterface.encodeFunctionData('tryBlockAndAggregate', [true, calls]);

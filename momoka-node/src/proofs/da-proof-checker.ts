@@ -237,7 +237,7 @@ export class DaProofChecker {
 
     log('event timestamp matches publication timestamp');
 
-    const validateBlockResult = await this.validateChoosenBlock(
+    const validateBlockResult = await this.validateChosenBlock(
       daPublication.chainProofs.thisPublication.blockNumber,
       daPublication.timestampProofs.response.timestamp,
       ethereumNode,
@@ -357,7 +357,7 @@ export class DaProofChecker {
    * @param log - The log function used to log debug information.
    * @returns A PromiseResult containing a success result if the block is validated, or a failure with the corresponding error.
    */
-  private async validateChoosenBlock(
+  private async validateChosenBlock(
     blockNumber: number,
     timestamp: number,
     ethereumNode: EthereumNode,
@@ -404,7 +404,7 @@ export class DaProofChecker {
         }
       }
 
-      log('compare done', { choosenBlock: closestBlock.timestamp, timestamp });
+      log('compare done', { chosenBlock: closestBlock.timestamp, timestamp });
 
       //TODO look at this again
       // block times are 2 seconds so this should never ever happen
@@ -414,7 +414,7 @@ export class DaProofChecker {
 
       return success();
     } catch (e) {
-      log('validateChoosenBlock error', e);
+      log('validateChosenBlock error', e);
       return failure(MomokaValidatorError.UNKNOWN);
     }
   }
