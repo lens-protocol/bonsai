@@ -162,14 +162,14 @@ async fn get_blocks(
 /// # Examples
 ///
 /// ```
-/// # use momoka_rs::{is_valid_choosen_block, EthereumNode};
+/// # use momoka_rs::{is_valid_chosen_block, EthereumNode};
 ///
 /// let block_number = 42;
 /// let timestamp = 1620627000;
 /// let provider_context = ProviderContext{(/* ... */)};
-/// let result = is_valid_choosen_block(&block_number, &timestamp, &provider_context).await;
+/// let result = is_valid_chosen_block(&block_number, &timestamp, &provider_context).await;
 /// ```
-async fn is_valid_choosen_block(
+async fn is_valid_chosen_block(
     block_number: &u64,
     timestamp: &u64,
     provider_context: &ProviderContext,
@@ -371,7 +371,7 @@ async fn process_proof(
         return Err(MomokaVerifierError::InvalidTypedDataDeadlineTimestamp);
     }
 
-    is_valid_choosen_block(
+    is_valid_chosen_block(
         transaction_summary.momoka_tx.block_number()?,
         transaction_summary
             .momoka_tx
