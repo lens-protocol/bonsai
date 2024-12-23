@@ -154,7 +154,7 @@ const stream = (result: StreamResult) => {
   } else {
     // failure reason
     console.log('reason', result.failureReason);
-    // this will expose the submisson if it could be read
+    // this will expose the submission if it could be read
     console.log('submisson', result.dataAvailabilityResult);
   }
 };

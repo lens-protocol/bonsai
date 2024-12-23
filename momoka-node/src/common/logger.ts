@@ -80,7 +80,7 @@ export const consoleWarn = (message: string, ...optionalParams: unknown[]): void
 };
 
 /**
- * A function to log a message to the console with a dyanmic font color.
+ * A function to log a message to the console with a dynamic font color.
  * @param message - The message to be logged to the console.
  * @param optionalParams - An optional list of additional parameters to be logged to the console.
  */
