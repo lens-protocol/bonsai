@@ -154,8 +154,8 @@ const stream = (result: StreamResult) => {
   } else {
     // failure reason
     console.log('reason', result.failureReason);
-    // this will expose the submisson if it could be read
-    console.log('submisson', result.dataAvailabilityResult);
+    // this will expose the submission if it could be read
+    console.log('submission', result.dataAvailabilityResult);
   }
 };
 
@@ -210,8 +210,8 @@ const stream = (result: StreamResult) => {
   } else {
     // failure reason
     console.log('reason', result.failureReason);
-    // this will expose the submisson if it could be read
-    console.log('submisson', result.dataAvailabilityResult);
+    // this will expose the submission if it could be read
+    console.log('submission', result.dataAvailabilityResult);
   }
 };
 
@@ -531,7 +531,7 @@ export enum MomokaValidatorError {
   PUBLICATION_NONCE_INVALID = 'PUBLICATION_NONCE_INVALID',
 
   /**
-   * This means the publication submisson was signed by a wallet that is not allowed
+   * This means the publication submission was signed by a wallet that is not allowed
    */
   PUBLICATION_SIGNER_NOT_ALLOWED = 'PUBLICATION_SIGNER_NOT_ALLOWED',
 
@@ -541,7 +541,7 @@ export enum MomokaValidatorError {
   CHAIN_SIGNATURE_ALREADY_USED = 'CHAIN_SIGNATURE_ALREADY_USED',
 
   /**
-   * This means the publication submisson could not pass potentional due to a reorg
+   * This means the publication submission could not pass potential due to a reorg
    */
   POTENTIAL_REORG = 'POTENTIAL_REORG',
 
